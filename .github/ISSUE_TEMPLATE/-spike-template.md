@@ -2,7 +2,7 @@
 name: " Spike Template"
 about: " A template to use for Spikes"
 title: ''
-labels: ''
+labels: spike
 assignees: ''
 
 ---
