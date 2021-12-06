@@ -1,0 +1,36 @@
+.PageWrapper {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.HeaderWrapper {
+  border-bottom: 1px sold green;
+  padding: 5px 0px;
+  background-color: red;
+}
+
+.Header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+}
+
+.Header nav a {
+  color: black;
+  padding: 0 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.Header nav a:hover {
+  text-decoration: underline;
+}
+
+.Title {
+  background-color: rgba(99, 75, 75, 0.226);
+}
