@@ -6,14 +6,20 @@ function Header({ logout, loggedIn }) {
   return (
     <header className={styles.HeaderWrapper}>
       <div className={`${styles.Header} ${styles.PageWrapper}`}>
-        <p className={styles.Title}>NYU Bazaar</p>
+        <p className={styles.Title}>
+          <a href="/">NYU Bazaar</a>
+        </p>
         <nav>
           {!loggedIn && (
             <>
               <ul>
-                
-                <a href="/"> <Scroll to="About_us" smooth={true} className={styles.cursor}>About Us  </Scroll></a>
-           
+                <a href="/">
+                  {" "}
+                  <Scroll to="About_us" smooth={true} className={styles.cursor}>
+                    About Us{" "}
+                  </Scroll>
+                </a>
+
                 <a href="/login">Login</a>
                 <a href="/createuser">Create User</a>
               </ul>
