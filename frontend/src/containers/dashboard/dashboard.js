@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "../../components/itemCard";
 import axios from "axios";
-export const MOCK_DATA = [
-  {
-    name: "George",
-    imageSrc: "",
-    postId: 1,
-    uID: 1,
-    message: "",
-    imageAlt: "",
-    location: "",
-    description: "",
-  },
-];
 
-const url = "http://localhost:4000/";
+const url = process.env.REACT_APP_ENDPOINT || "http://localhost:4000/";
 
 function Dashboard() {
   const [userPosts, setUserPosts] = useState([]);

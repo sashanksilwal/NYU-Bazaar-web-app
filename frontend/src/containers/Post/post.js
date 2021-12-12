@@ -7,10 +7,10 @@ export default function Post() {
 
   let { slug } = useParams();
   console.log(slug);
-  const baseUrl = `http://localhost:4000`;
+  const baseUrl = process.env.REACT_APP_ENDPOINT || "http://localhost:4000/";
 
   useEffect(() => {
-    const url = `${baseUrl}/post/${slug}`;
+    const url = `${baseUrl}post/${slug}`;
     axios
       .get(url)
       .then(function (response) {

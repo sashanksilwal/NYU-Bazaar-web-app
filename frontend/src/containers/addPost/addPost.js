@@ -6,7 +6,8 @@ import axios from "axios";
 function AddPost({ userInformation }) {
   let navigate = useNavigate();
 
-  const baseUrl = "http://localhost:4000/";
+  const baseUrl = process.env.REACT_APP_ENDPOINT || "http://localhost:4000/";
+
   function submitPost(e) {
     e.preventDefault();
     const itemName = e.currentTarget.name.value;
