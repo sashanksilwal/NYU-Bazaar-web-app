@@ -7,7 +7,7 @@ function CreateUserForm({ signUpUser }) {
       <h2>Create User Form</h2>
       <form onSubmit={(e) => signUpUser(e)}>
         <label htmlFor="name">Name</label>
-        <input type="name" name="name" placeholder="Enter name" />
+        <input type="name" name="username" placeholder="Enter name" />
         <label htmlFor="email">Email</label>
         <input type="email" name="email" placeholder="Enter email" />
 
@@ -20,7 +20,7 @@ function CreateUserForm({ signUpUser }) {
 }
 
 CreateUserForm.propTypes = {
-  signUpUser: PropTypes,
+  signUpUser: PropTypes.func,
 };
 
 export default CreateUserForm;

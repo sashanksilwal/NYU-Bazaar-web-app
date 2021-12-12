@@ -20,7 +20,7 @@ function LoginForm({ loginUser }) {
 }
 
 LoginForm.propTypes = {
-  loginUser: PropTypes,
+  loginUser: PropTypes.func,
 };
 
 export default LoginForm;
