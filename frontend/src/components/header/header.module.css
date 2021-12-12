@@ -1,3 +1,7 @@
+.cursor:hover{
+  cursor: pointer;
+}
+
 .PageWrapper {
   margin: 0 auto;
   max-width: 1140px;
@@ -8,7 +12,6 @@
 .HeaderWrapper {
   border-bottom: 1px sold green;
   padding: 5px 0px;
-  background-color: red;
 }
 
 .Header {
@@ -32,5 +35,5 @@
 }
 
 .Title {
-  background-color: rgba(99, 75, 75, 0.226);
+  background-color: rgba(117, 6, 145, 0.226);
 }

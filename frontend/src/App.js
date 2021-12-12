@@ -13,6 +13,7 @@ import { initializeApp } from "firebase/app";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Post from "./containers/Post/post";
+import Home from "./containers/homePage/homePage";
 
 const FirebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -148,20 +149,7 @@ function App() {
                 )
               }
             />
-            <Route
-              path="/"
-              element={
-                loggedIn ? (
-                  <Dashboard />
-                ) : (
-                  <Login
-                    setLoggedIn={setLoggedIn}
-                    setUserInformation={setUserInformation}
-                    setError={setErrors}
-                  />
-                )
-              }
-            />
+            <Route path="/" element={loggedIn ? <Dashboard /> : <Home />} />
             <Route
               path="/:anything"
               element={
