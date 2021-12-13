@@ -14,11 +14,12 @@ function AddPost({ userInformation }) {
     const description = e.currentTarget.description.value;
     const price = e.currentTarget.price.value;
     const pickupLocation = e.currentTarget.location.value;
+    const imageSrc = e.currentTarget.imageSrc.value;
 
     const userName = userInformation.displayName;
     const userId = userInformation.uid;
 
-    const url = `${baseUrl}create?itemName=${itemName}&description=${description}&price=${price}&pickupLocation=${pickupLocation}&userName=${userName}&userId=${userId}`;
+    const url = `${baseUrl}create?itemName=${itemName}&description=${description}&price=${price}&pickupLocation=${pickupLocation}&userName=${userName}&userId=${userId}&imageSrc=${imageSrc}`;
     axios
       .get(url)
       .then(function (response) {

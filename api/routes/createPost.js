@@ -25,8 +25,15 @@ const db = firestore.getFirestore();
 router.get("/", (req, res) => {
   const queryParams = req.query;
 
-  const { itemName, description, price, pickupLocation, userName, userId } =
-    queryParams;
+  const {
+    itemName,
+    description,
+    price,
+    pickupLocation,
+    userName,
+    userId,
+    imageSrc,
+  } = queryParams;
 
   const setUserPosts = firestore.addDoc(firestore.collection(db, "userPosts"), {
     itemName,
@@ -35,6 +42,7 @@ router.get("/", (req, res) => {
     pickupLocation,
     userName,
     userId,
+    imageSrc,
   });
 
   setUserPosts

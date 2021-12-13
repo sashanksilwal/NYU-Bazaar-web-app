@@ -39,7 +39,7 @@ export default function Post() {
         <strong>Price: </strong>${post.price}
         <br />
         <br />
-        <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c" />
+        <img src={post.imageSrc} />
       </p>
     </div>
   );

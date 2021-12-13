@@ -28,11 +28,7 @@ function Dashboard() {
         <ImageList>
           {userPosts.map((e, i) => (
             <ImageListItem key={i} cols={0.2}>
-              <img
-                src={`https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?w=248&fit=crop&auto=format`}
-                alt={e.itemName}
-                loading="lazy"
-              />
+              <img src={e.imageSrc} alt={e.itemName} loading="lazy" />
               <ImageListItemBar
                 title={e.itemName}
                 subtitle={

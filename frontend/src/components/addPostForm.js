@@ -16,6 +16,9 @@ export default function AddPostForm({ submitPost }) {
         <label htmlFor="price">Price</label>
         <input type="price" name="price" placeholder="Enter price" />
 
+        <label htmlFor="imageSrc">ImageSrc</label>
+        <input type="imageSrc" name="imageSrc" placeholder="Enter Image Link" />
+
         <label htmlFor="text">Location</label>
         <input
           type="text"
