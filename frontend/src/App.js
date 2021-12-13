@@ -88,7 +88,7 @@ function App() {
                     setError={setErrors}
                   />
                 ) : (
-                  <Navigate to="/" />
+                  <Navigate to="/home" />
                 )
               }
             />
@@ -102,7 +102,7 @@ function App() {
                     setError={setErrors}
                   />
                 ) : (
-                  <Navigate to="/" />
+                  <Navigate to="/home" />
                 )
               }
             />
@@ -149,7 +149,21 @@ function App() {
                 )
               }
             />
-            <Route path="/" element={loggedIn ? <Dashboard /> : <Home />} />
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/home"
+              element={
+                loggedIn ? (
+                  <Dashboard />
+                ) : (
+                  <Login
+                    setLoggedIn={setLoggedIn}
+                    setUserInformation={setUserInformation}
+                    setError={setErrors}
+                  />
+                )
+              }
+            />
             <Route
               path="/:anything"
               element={

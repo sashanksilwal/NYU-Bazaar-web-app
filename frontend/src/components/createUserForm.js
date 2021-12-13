@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 function CreateUserForm({ signUpUser }) {
   return (
     <div className="Form">
@@ -13,6 +12,7 @@ function CreateUserForm({ signUpUser }) {
 
         <label htmlFor="password">Password</label>
         <input type="password" name="password" placeholder="******" />
+
         <button type="Submit">CreateUser</button>
       </form>
     </div>

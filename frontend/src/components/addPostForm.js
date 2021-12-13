@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+// import LocationField from "./localtionField";
 
 export default function AddPostForm({ submitPost }) {
   return (
@@ -21,7 +22,7 @@ export default function AddPostForm({ submitPost }) {
           name="location"
           placeholder="Enter Pickup Location"
         />
-
+        {/* <LocationField name="location" placeholder="Enter Location" /> */}
         <button type="Submit">Submit</button>
       </form>
     </div>

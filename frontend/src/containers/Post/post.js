@@ -25,18 +25,21 @@ export default function Post() {
   if (!post) return null;
   return (
     <div className="PageWrapper">
-      Post
       <p>
+        <br />
+        <strong>Item: </strong>
         {post.itemName}
         <br />
+        <strong>Pickup Location: </strong>
         {post.pickupLocation}
         <br />
+        <strong>Description: </strong>
         {post.description}
         <br />
-        {post.price}
+        <strong>Price: </strong>${post.price}
         <br />
-        {post.userId}
         <br />
+        <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c" />
       </p>
     </div>
   );

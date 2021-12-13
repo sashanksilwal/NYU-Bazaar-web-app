@@ -28,13 +28,13 @@ function Header({ logout, loggedIn }) {
           {loggedIn && (
             <>
               <ul>
-                <a href="/">Dashboard</a>
+                <a href="/home">Dashboard</a>
 
                 <a href="/addpost">Add Post</a>
 
                 <a href="/user/id">User Profile</a>
 
-                <button className="Logout" onClick={() => logout()}>
+                <button className={styles.logout} onClick={() => logout()}>
                   Logout
                 </button>
               </ul>
