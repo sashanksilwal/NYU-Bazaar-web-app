@@ -23,7 +23,7 @@ function AddPost({ userInformation }) {
       .get(url)
       .then(function (response) {
         console.log({ response });
-        navigate("/", { replace: true });
+        navigate("/home", { replace: true });
       })
       .catch(function (err) {
         console.log(err);
