@@ -71,6 +71,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 .PageWrapper {
   margin: 0 auto;
   max-width: 1140px;
@@ -105,4 +106,64 @@ select {
 .geosuggest__item--active {
   background: #267dc0;
   color: #fff;
+}
+
+form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.Submit {
+  background-color: #414741; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.Submit {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(2, 2, 39);
+}
+
+.Submit:hover {
+  background-color: rgb(2, 2, 39);
+  color: white;
+}
+
+.Text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(13, 56, 121);
+  line-height: 1.3;
+}
+
+.TextLink {
+  text-decoration: underline;
+  font-size: 1rem;
+  color: rgb(12, 11, 11);
+}
+
+.Title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
 }

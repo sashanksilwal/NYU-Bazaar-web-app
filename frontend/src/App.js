@@ -10,8 +10,8 @@ import UserProfile from "./containers/userProfile/userProfile";
 import Header from "./components/header/header";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-// import CircularProgress from "@mui/material/CircularProgress";
-// import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import Post from "./containers/Post/post";
 import Home from "./containers/homePage/homePage";
 
@@ -23,7 +23,6 @@ const FirebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDING_ID,
   appId: process.env.REACT_APP_APP_ID,
 };
-
 function App() {
   const [loggedIn, setLoggedIn] = useState();
   const [loading, setLoading] = useState(false);
@@ -31,9 +30,6 @@ function App() {
   const [appInitialized, setAppInitialized] = useState(false);
   const [errors, setErrors] = useState();
 
-  console.log(loading, "Loading");
-  console.log(loggedIn, "Loggedin");
-  console.log(appInitialized, "appInitialized");
   useEffect(() => {
     initializeApp(FirebaseConfig);
     setAppInitialized(true);
@@ -69,7 +65,19 @@ function App() {
   }
 
   if (loading || !appInitialized || loggedIn == null) {
-    return null;
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "auto",
+          marginTop: "50vh",
+        }}
+      >
+        <CircularProgress size={80} />
+      </Box>
+    );
   }
 
   return (

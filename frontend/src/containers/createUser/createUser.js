@@ -1,6 +1,10 @@
 import React, { useCallback } from "react";
 import CreateUserForm from "../../components/createUserForm";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import PropTypes from "prop-types";
 
 export default function CreateUser({
@@ -31,13 +35,22 @@ export default function CreateUser({
             uid: user.uid,
             accessToken: user.accessToken,
           });
-          setError();
+
+          updateProfile(auth.currentUser, {
+            displayName,
+          })
+            .then(() => {
+              console.log("successfully signed up");
+            })
+            .catch((error) => {
+              return setError(error.errorMessage);
+            });
         })
         .catch((error) => {
-          // const errorCode = error.code;
-          // const errorMessage = error.message;
-          console.log({ error });
-          setError(error.message);
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.warn({ error, errorCode, errorMessage });
+          setError(errorMessage);
         });
     },
     [setLoggedIn, setUserInformation, setError]

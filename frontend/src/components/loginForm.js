@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 function LoginForm({ loginUser }) {
   return (
     <div className="Form">
-      <h2>Login User Form</h2>
       <form onSubmit={(e) => loginUser(e)}>
         <label htmlFor="name">Name</label>
         <input type="name" name="name" placeholder="Enter name" />
@@ -13,7 +12,9 @@ function LoginForm({ loginUser }) {
 
         <label htmlFor="password">Password</label>
         <input type="password" name="password" placeholder="******" />
-        <button type="Submit">Login</button>
+        <button className="Submit" type="Submit">
+          Login
+        </button>
       </form>
     </div>
   );

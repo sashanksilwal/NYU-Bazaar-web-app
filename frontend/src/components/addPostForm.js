@@ -26,7 +26,9 @@ export default function AddPostForm({ submitPost }) {
           placeholder="Enter Pickup Location"
         />
         {/* <LocationField name="location" placeholder="Enter Location" /> */}
-        <button type="Submit">Submit</button>
+        <button className="Submit" type="Submit">
+          Submit
+        </button>
       </form>
     </div>
   );
