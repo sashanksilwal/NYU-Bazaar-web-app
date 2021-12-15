@@ -28,7 +28,7 @@ function UserProfile({ userInformation }) {
       <h1>Name: {userInformation.displayName}</h1>
       <h1>User Email: {userInformation.email}</h1>
       <div className="Full">
-        {filtered && (
+        {filtered && filtered.length === 0 && (
           <span>Nothing posted by you, so nothing to display here</span>
         )}
         <ImageList>
