@@ -2,6 +2,9 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import { initializeApp } from "firebase/app";
 import Login from "./containers/login/login";
 import CreateUser from "./containers/createUser/createUser";
 import Dashboard from "./containers/dashboard/dashboard";
@@ -9,9 +12,8 @@ import AddPost from "./containers/addPost/addPost";
 import UserProfile from "./containers/userProfile/userProfile";
 import Header from "./components/header/header";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import { initializeApp } from "firebase/app";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
+
+
 import Post from "./containers/Post/post";
 import Home from "./containers/homePage/homePage";
 
